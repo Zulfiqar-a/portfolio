@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+:root {
+  /* ---- Signal design tokens ---- */
+  --void:        #0A0B0D;   /* base background */
+  --surface:     #131519;   /* panel/card surface */
+  --surface-2:   #191c22;   /* elevated panel */
+  --line:        #23262d;   /* hairline borders */
+  --ink:         #E9E7E2;   /* primary text, warm off-white */
+  --fog:         #8A8D95;   /* muted/secondary text */
+  --fog-dim:     #5C5F66;   /* tertiary/captions */
+  --violet:      #7C6FF5;   /* signal peak */
+  --cyan:        #2DD4C8;   /* signal trough */
+  --violet-dim:  rgba(124,111,245,0.14);
+  --cyan-dim:    rgba(45,212,200,0.14);
+
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--void);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--violet);
+  color: var(--void);
+}
+
+/* focus visibility kept intentional, not suppressed */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.font-mono-label {
+  font-family: var(--font-mono);
+  letter-spacing: 0.06em;
+}
+
+/* Signature signal-divider: an animated waveform hairline used between sections */
+.signal-divider {
+  position: relative;
+  height: 1px;
+  background: var(--line);
+  overflow: visible;
+}
+.signal-divider::before {
+  content: "";
+  position: absolute;
+  left: 0; top: -1px;
+  height: 3px;
+  width: 120px;
+  background: linear-gradient(90deg, transparent, var(--violet), var(--cyan), transparent);
+  filter: blur(1px);
+  animation: travel 7s linear infinite;
+}
+@keyframes travel {
+  0%   { left: -10%; }
+  100% { left: 110%; }
+}
+
+/* marquee for skills strip */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-x 34s linear infinite;
+}
+@keyframes scroll-x {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Hero waveform bars — pure CSS pulse, no JS animation loop */
+.wave-bar {
+  transform-origin: bottom center;
+  animation: wave-pulse 1.6s ease-in-out infinite;
+}
+@keyframes wave-pulse {
+  0%, 100% { transform: scaleY(0.55); opacity: 0.75; }
+  50%      { transform: scaleY(1);    opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .signal-divider::before, .marquee-track, .wave-bar {
+    animation: none !important;
+  }
+  html { scroll-behavior: auto; }
+}
