@@ -11,7 +11,7 @@ export default function CurrentWork() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.5 }}
         >
-          <p className="font-mono-label text-xs text-[color:var(--cyan)] mb-3">
+            <p className="font-mono-label text-xs text-[color:var(--violet)] mb-3">
             WHAT I'M BUILDING NOW
           </p>
           <h2 className="text-2xl md:text-3xl text-[color:var(--ink)] mb-3">
@@ -46,7 +46,7 @@ export default function CurrentWork() {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="rounded-2xl border border-[color:var(--line)] bg-[color:var(--surface)] p-6"
             >
-              <p className="font-mono-label text-[11px] text-[color:var(--cyan)] mb-2">
+              <p className="font-mono-label text-[11px] text-[color:var(--violet)] mb-2">
                 {a.label.toUpperCase()}
               </p>
               <h3 className="text-lg text-[color:var(--ink)] mb-1">

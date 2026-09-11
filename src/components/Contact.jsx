@@ -25,7 +25,7 @@ export default function Contact() {
     >
       <div className="max-w-6xl mx-auto px-6 md:px-10 grid md:grid-cols-[1.6fr_1fr] gap-14">
         <div>
-          <p className="font-mono-label text-xs text-[color:var(--cyan)] mb-4">
+          <p className="font-mono-label text-xs text-[color:var(--violet)] mb-4">
             GET IN TOUCH
           </p>
           <h2 className="text-3xl md:text-5xl text-[color:var(--ink)] max-w-xl leading-tight">

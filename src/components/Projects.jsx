@@ -5,7 +5,7 @@ export default function Projects() {
   return (
     <section id="work" className="py-20 md:py-28 border-t border-[color:var(--line)]">
       <div className="max-w-6xl mx-auto px-6 md:px-10">
-        <p className="font-mono-label text-xs text-[color:var(--cyan)] mb-3">
+        <p className="font-mono-label text-xs text-[color:var(--violet)] mb-3">
           SELECTED WORK
         </p>
         <h2 className="text-2xl md:text-3xl text-[color:var(--ink)] mb-12 max-w-xl">

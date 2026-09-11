@@ -10,13 +10,10 @@
   --fog:         #8A8D95;   /* muted/secondary text */
   --fog-dim:     #5C5F66;   /* tertiary/captions */
   --violet:      #7C6FF5;   /* signal peak */
-  --cyan:        #2DD4C8;   /* signal trough */
   --violet-dim:  rgba(124,111,245,0.14);
-  --cyan-dim:    rgba(45,212,200,0.14);
 
   --font-display: "Space Grotesk", sans-serif;
   --font-body: "Inter", sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
 
   color-scheme: dark;
 }
@@ -41,7 +38,7 @@ body {
 
 /* focus visibility kept intentional, not suppressed */
 a:focus-visible, button:focus-visible {
-  outline: 2px solid var(--cyan);
+  outline: 2px solid var(--violet);
   outline-offset: 3px;
 }
 
@@ -52,7 +49,7 @@ h1, h2, h3, h4 {
 }
 
 .font-mono-label {
-  font-family: var(--font-mono);
+  font-family: var(--font-body);
   letter-spacing: 0.06em;
 }
 
@@ -69,7 +66,7 @@ h1, h2, h3, h4 {
   left: 0; top: -1px;
   height: 3px;
   width: 120px;
-  background: linear-gradient(90deg, transparent, var(--violet), var(--cyan), transparent);
+  background: linear-gradient(90deg, transparent, var(--violet), transparent);
   filter: blur(1px);
   animation: travel 7s linear infinite;
 }

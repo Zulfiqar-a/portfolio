@@ -27,7 +27,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
         >
-          <p className="font-mono-label text-xs text-[color:var(--cyan)] mb-5">
+          <p className="font-mono-label text-xs text-[color:var(--violet)] mb-5">
             AI / ML ENGINEER — KARACHI, PAKISTAN
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl leading-[1.05] text-[color:var(--ink)]">
@@ -45,7 +45,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
              href="#work"
-              className="px-6 py-3 rounded-full bg-[color:var(--violet)] text-[color:var(--void)] font-medium hover:bg-[color:var(--cyan)] transition-colors"
+              className="px-6 py-3 rounded-full bg-[color:var(--violet)] text-[color:var(--void)] font-medium hover:bg-[color:var(--violet)] transition-colors"
             >
               See the work
             </a>

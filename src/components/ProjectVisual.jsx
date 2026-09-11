@@ -12,7 +12,7 @@ const variants = {
             width="3.5"
             height={h}
             rx="1.5"
-            fill={i % 2 === 0 ? "var(--violet)" : "var(--cyan)"}
+            fill="var(--violet)"
             opacity="0.85"
           />
         );
@@ -26,7 +26,7 @@ const variants = {
       {[34, 46, 58, 70].map((y) => (
         <rect key={y} x="14" y={y} width="132" height="6" rx="3" fill="var(--line)" />
       ))}
-      <circle cx="132" cy="20" r="10" fill="var(--cyan)" opacity="0.7" />
+      <circle cx="132" cy="20" r="10" fill="var(--violet)" opacity="0.7" />
     </svg>
   ),
   mic: () => (
@@ -35,12 +35,12 @@ const variants = {
       <rect x="70" y="24" width="20" height="34" rx="10" fill="var(--violet)" />
       <path
         d="M52 50a28 28 0 0 0 56 0"
-        stroke="var(--cyan)"
+        stroke="var(--violet)"
         strokeWidth="4"
         fill="none"
         strokeLinecap="round"
       />
-      <line x1="80" y1="78" x2="80" y2="88" stroke="var(--cyan)" strokeWidth="4" strokeLinecap="round" />
+      <line x1="80" y1="78" x2="80" y2="88" stroke="var(--violet)" strokeWidth="4" strokeLinecap="round" />
       <line x1="64" y1="88" x2="96" y2="88" stroke="var(--fog-dim)" strokeWidth="4" strokeLinecap="round" />
     </svg>
   ),
@@ -63,7 +63,7 @@ const variants = {
         [40, 68],
         [100, 78],
       ].map(([x, y], i) => (
-        <circle key={i} cx={x} cy={y} r="6" fill={i % 2 === 0 ? "var(--violet)" : "var(--cyan)"} />
+        <circle key={i} cx={x} cy={y} r="6" fill="var(--violet)" />
       ))}
     </svg>
   ),

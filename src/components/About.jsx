@@ -9,7 +9,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.5 }}
-          className="font-mono-label text-xs text-[color:var(--cyan)]"
+          className="font-mono-label text-xs text-[color:var(--violet)]"
         >
           ABOUT
         </motion.p>

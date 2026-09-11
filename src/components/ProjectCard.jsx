@@ -17,7 +17,7 @@ export default function ProjectCard({ project, index }) {
         </span>
 
         <div>
-          <p className="font-mono-label text-[11px] text-[color:var(--cyan)] mb-3">
+          <p className="font-mono-label text-[11px] text-[color:var(--violet)] mb-3">
             {project.tag.toUpperCase()}
           </p>
           <h3 className="text-2xl md:text-3xl text-[color:var(--ink)] mb-3">
